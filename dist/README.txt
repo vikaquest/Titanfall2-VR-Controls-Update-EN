@@ -2,17 +2,9 @@
 
 Unofficial Windows patcher for CircuitLord’s Titanfall 2 VR mod. Choose features on the left and see instructions and controls on the right.
 
-[Download the EXE or ZIP](https://github.com/vikaquest/Titanfall2-VR-Controls-Update-EN/releases/latest) · [Русская версия](https://github.com/vikaquest/TitanFall2_VR_mode_improved)
+## Download
 
-![Titanfall 2 VR Controls Update — EN](docs/app-tour.gif)
-
-The animation selects the next feature every second. This shows the real application UI, not gameplay.
-
-<details><summary>Static screenshot</summary>
-
-![Titanfall 2 VR patcher](docs/screenshot.png)
-
-</details>
+[Download the EXE or ZIP](https://github.com/vikaquest/Titanfall2-VR-Controls-Update-EN/releases/latest)
 
 ## Install
 
@@ -24,6 +16,18 @@ The animation selects the next feature every second. This shows the real applica
 Windows 10/11 x64, .NET Framework 4.8, Quest / Touch controllers. No Python, internet access or separate patcher installation is needed to run the EXE.
 
 New features target the verified **VR mod 1.0.17** build. The earlier **1.0.13 / 1.0.14** profiles retain their previous nine options and mappings. Files are recognized by hashes, not just version labels.
+
+## Application preview
+
+![Titanfall 2 VR Controls Update — EN](docs/app-tour.gif)
+
+The animation selects the next feature every second. This shows the real application UI, not gameplay.
+
+<details><summary>Static screenshot</summary>
+
+![Titanfall 2 VR patcher](docs/screenshot.png)
+
+</details>
 
 ## Features and controls
 
@@ -58,7 +62,7 @@ Hold Left Grip and press a button to use an ability. No directional hand gesture
 
 A and B are on the right controller. R3 means clicking the right stick. Ability 1 supports holding. VR 1.0.13 / 1.0.14 retain their earlier mapping; the updated chords apply to 1.0.17.
 
-### Weapon and head steering
+### Fast Titan cockpit turning with head and weapon
 
 The weapon contributes 70% of the cockpit's target heading and your head contributes 30%. Turning is faster, with a brief inertial follow-through.
 
@@ -68,7 +72,7 @@ The weapon contributes 70% of the cockpit's target heading and your head contrib
 
 Also reduces sword-defense transitions and recovery settings to 0.1 s. If the weapon pose is invalid, steering falls back to the headset. Stick turn speed is doubled when stick turning is enabled.
 
-### Disable horizontal stick turning
+### Disable left/right Titan cockpit stick turning
 
 Disable artificial left/right turning with the right stick, both on foot and in a Titan. Use physical VR movement instead.
 
@@ -160,7 +164,7 @@ This repository contains the patcher source, not the original VR mod source.
 - `payload.json` — binary patch operations, script deltas and supported-file hashes.
 - `build.ps1` — standalone x64 .NET Framework build.
 
-Run `./build.ps1` on Windows. The result is `dist/Titanfall2VR-QuestPatch.exe`. No original game DLLs or complete original game scripts are included. Russian and English editions use the same game patch recipes and backup format; only UI text and build language differ.
+Run `./build.ps1` on Windows. The result is `dist/Titanfall2VR-QuestPatch.exe`. No original game DLLs or complete original game scripts are included.
 
 ## Verification and limits
 
