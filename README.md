@@ -1,177 +1,64 @@
-# Titanfall 2 VR — Controls Update v1.3.0
+# Titanfall 2 VR — Controls Update v1.5.0
 
-Unofficial Windows patcher for CircuitLord’s Titanfall 2 VR mod. Choose features on the left and see instructions and controls on the right.
+Unofficial patcher for CircuitLord’s Titanfall 2 VR mod. Adds control, dash, reticle and sound improvements. Configure individual features in the game; the patcher shows a feature catalog on the left and detailed instructions on the right.
 
 ## Download
 
-[Download the EXE or ZIP](https://github.com/vikaquest/Titanfall2-VR-Controls-Update-EN/releases/latest)
+[**Download EXE v1.5.0**](https://github.com/vikaquest/Titanfall2-VR-Controls-Update-EN/releases/download/v1.5.0/Titanfall2VR-QuestPatch.exe) · [ZIP](https://github.com/vikaquest/Titanfall2-VR-Controls-Update-EN/releases/download/v1.5.0/Titanfall2VR-QuestPatch.zip) · [Release page](https://github.com/vikaquest/Titanfall2-VR-Controls-Update-EN/releases/tag/v1.5.0)
 
 ## Install
 
-1. Install Titanfall 2, then install the VR mod through [CircuitLordVRModInstaller](https://github.com/CircuitLord/CircuitLordVRModInstaller).
-2. Close the game. Download and run `Titanfall2VR-QuestPatch.exe`.
-3. Select the `Titanfall2` game folder. All options start enabled; uncheck any you do not want. Click a feature title to read its description and controls.
-4. Click **Apply changes**, then launch VR through the original installer as usual.
+1. Install Titanfall 2, then VR mod **1.0.17** through [CircuitLordVRModInstaller](https://github.com/CircuitLord/CircuitLordVRModInstaller).
+2. Close the game and run `Titanfall2VR-QuestPatch.exe`.
+3. Select the installed game folder and click **Apply changes**. The complete update is installed together; there are no installation checkboxes.
+4. Launch VR through CircuitLord as usual, then open **VR Settings** in the game to configure features.
 
-Windows 10/11 x64, .NET Framework 4.8, Quest / Touch controllers. No Python, internet access or separate patcher installation is needed to run the EXE.
+Windows 10/11 x64, .NET Framework 4.8, Quest / Touch controllers. Running the EXE does not require Python or a separate patcher installation. Supports the verified **VR mod 1.0.17** build; unrecognized DLLs and incompatible game dependencies block installation. Existing saved preferences are preserved.
 
-New features target the verified **VR mod 1.0.17** build. The earlier **1.0.13 / 1.0.14** profiles retain their previous nine options and mappings. Files are recognized by hashes, not just version labels.
+## Application
 
-## Application preview
-
-![Titanfall 2 VR Controls Update — EN](docs/app-tour.gif)
-
-The animation selects the next feature every second. This shows the real application UI, not gameplay.
-
-<details><summary>Static screenshot</summary>
-
-![Titanfall 2 VR patcher](docs/screenshot.png)
-
-</details>
+![Titanfall 2 VR — Controls Update 1.5.0](docs/screenshot.png)
 
 ## Features and controls
 
-### Switch Titan loadouts in combat
+| Feature | Controls |
+| --- | --- |
+| Cycle Titan loadouts in combat | **Right Grip + B**, while piloting a Titan. Left Grip + B keeps priority for ability 3. |
+| All eight campaign loadouts | VR Settings → Titan → Available loadouts: unlocked only or all eight. Menu locks and story progress remain unchanged. |
+| Titan abilities without arrows | **Left Grip + left Trigger** — 1, **+ A** — 2, **+ B** — 3, **+ R3** — core. Visual arrows can be restored in settings. |
+| Melee | **R3**, or **left Grip + right Trigger** in a Titan. |
+| Cabin steering | Extended or original steering; weapon/head mix in 5% steps, speed, inertia and a toggle for stick turning. |
+| Ground slide and air dash | **Left Grip + left Trigger**. Ground and air can be enabled separately. Cooldown 0.2 s; default forced slide hold 0.2 s. |
+| Directional stick dashes | Enable right-stick dashes and return the stick to center before repeating. Original stick controls are the default. |
+| Swap holsters | **B** with empty hands swaps the main and side holsters without drawing a weapon. |
+| Random back-holster weapon | **Right Trigger + B** with empty hands. Availability depends on level resources. |
+| Auto-swap an empty weapon | Enable auto-swap, fire the last round, then holster the weapon. Off by default. |
+| Magazines and reloading | **Left Trigger**; release left Grip to grab a magazine. Pilot ability is on **L3**. |
+| Two-hand support | Doubled acquisition area; support remains latched until left Grip is released. Reload reach is also doubled. |
+| Chest grenade | **Right Trigger**. Original Grip-based grabbing can be restored in settings. |
+| Weapon reticle | Filled dot, ring, cross or three lines; size 50–200%, or disabled. Head reticle hidden; other HUD indicators preserved. |
+| Sound feedback | Empty-magazine click, last-round notification and air-dash jet sound. Toggles and volume 0–300% in 10% steps; sample selection for weapon notifications. |
 
-Cycle through your Titan's weapons and abilities without opening a menu.
+### In-game settings
 
-- Right Grip + X → next loadout
+Six tabs: **Basic VR → Titan → Weapons → Dash → Sounds → Reticle**. Ground dash, air dash, Grip + Trigger activation and stick activation have independent settings. Auto-sprint is forced on for this control scheme.
 
-Only while piloting a Titan. X is on the left controller. One chord press switches once. Plain X without Grip keeps its normal disembark action.
+The complete update also includes unlimited reserve ammunition for **manual** reloading and a recharge of normal grenades to three 20 seconds after the last throw, including partially spent supplies. C4, mines, remotely detonated devices and the charge-based sonar grenade are excluded. There is no separate reserve-ammo toggle in the menu.
 
-### All 8 campaign Titan loadouts
+Random weapons and Titan loadouts depend on assets available on the current map. The full weapon pool is not guaranteed on every level. Magazine capacity and fire rate are unchanged.
 
-Include campaign loadouts that have not yet been unlocked by the story.
+## Restore
 
-- Right Grip + X → cycle loadouts
-- Expedition · Tone · Scorch · Brute
-- Ion · Ronin · Northstar · Legion
+**Restore (Remove patcher files)** returns files to their state **before the first 1.5.0 installation**: replaced files are restored and files added by this installation are removed. Improvements installed before 1.5.0 may remain because they belong to that original state. Game saves and profile settings are not deleted.
 
-Available once you are piloting a Titan; this does not spawn a Titan during the first mission's on-foot section. Menu locks and story progress remain unchanged. Level resource availability can limit selection.
+Backups are stored in `.quest-controls-update-1.5.0` inside the game folder. Earlier backups are retained. Do not apply an older patcher over 1.5.0; restore with the current version first.
 
-### Titan abilities on button chords
+## Source and validation
 
-Hold Left Grip and press a button to use an ability. No directional hand gestures are required.
+Window and installer source: `QuestPatch.cs`; resources: `features.json`, `messages.json`, `payload.json`. Build with `powershell -ExecutionPolicy Bypass -File ./build.ps1`.
 
-- Left Grip + Left Trigger → ability 1
-- Left Grip + A → ability 2
-- Left Grip + B → ability 3
-- Left Grip + R3 → Titan core
-- Left Grip + Right Trigger → melee
-- R3 without Grip → melee
+`payload.json` contains prepared game files, not the original VR mod’s C++ source. CircuitLord creates the original VR mod; this project supplies unofficial modifications and a patcher.
 
-A and B are on the right controller. R3 means clicking the right stick. Ability 1 supports holding. VR 1.0.13 / 1.0.14 retain their earlier mapping; the updated chords apply to 1.0.17.
+Installation, reapplication, restoration and interrupted-transaction recovery were checked on file fixtures, along with embedded-file integrity and both interface languages. See [VERIFICATION.md](VERIFICATION.md). Code checks do not replace testing your installation in a headset.
 
-### Fast Titan cockpit turning with head and weapon
-
-The weapon contributes 70% of the cockpit's target heading and your head contributes 30%. Turning is faster, with a brief inertial follow-through.
-
-- Weapon — 70%   /   Head — 30%
-- Automatic turn rate — up to 360°/s
-- Transient inertial lead — up to 20°
-
-Also reduces sword-defense transitions and recovery settings to 0.1 s. If the weapon pose is invalid, steering falls back to the headset. Stick turn speed is doubled when stick turning is enabled.
-
-### Disable left/right Titan cockpit stick turning
-
-Disable artificial left/right turning with the right stick, both on foot and in a Titan. Use physical VR movement instead.
-
-- Right stick left / right → no virtual turn
-
-Vertical stick input and stick clicks are preserved. Enable weapon/head steering above to steer the Titan cockpit using tracked motion.
-
-### Swap weapons between holsters
-
-Swap the weapons stored behind your shoulder and at your left hip. Both stay holstered rather than being drawn into your hands.
-
-- B → swap holstered weapons
-
-Both weapons must be holstered, hands empty, and other buttons released. B is on the right controller. With a weapon in hand, B retains normal reload behavior.
-
-### Hip-fire aiming dot
-
-See where your weapon is pointing without bringing it up to your eye or entering the aiming view.
-
-- Small, solid white dot
-- Shown while the pilot holds a weapon
-
-This indicates weapon direction, not bullet spread or a predicted trajectory. It is not shown for grenades or Titans.
-
-### Randomize your shoulder weapon
-
-Replace the weapon in your shoulder holster with a random weapon. Your left-hip weapon stays unchanged.
-
-- Right Trigger + B → random weapon
-- Press B again for another replacement
-
-Both weapons must be holstered and your hands empty. The 31-weapon pool is filtered by level resource availability and excludes your current weapons. Requires the holster-swap option.
-
-### Magazine and reload on Trigger
-
-Use the left trigger to grab magazines and operate manual reload mechanisms. Grip remains available for holding the weapon.
-
-- Left Trigger → magazine and reload
-
-Automatically enables moving the pilot ability to L3 to free the left trigger.
-
-### Pilot ability on L3
-
-Activate cloak or the pilot's current ability by clicking the left stick.
-
-- L3 → pilot ability
-
-Applies on foot. L3 means clicking the left stick. Frees the left trigger for reload interactions.
-
-### Double the support-hand area
-
-Double the interaction area used when supporting your weapon with the second hand.
-
-- Support-hand grab area ×2
-
-Does not change the right-Grip weapon-draw area.
-
-### Double the reload interaction areas
-
-Double magazine and reload-mechanism interaction areas so controller movements require less precision.
-
-- Magazine and reload-mechanism areas ×2
-
-Changes interaction areas, not the speed of reload animations.
-
-### Chest grenade on Right Trigger
-
-Bring your hand to your chest and press the right trigger to grab a regular grenade.
-
-- Hand at chest + Right Trigger → grenade
-
-Applies to regular grenades. C4 pickup changes are not included.
-
-## Backups and changing options
-
-All options are checked on each launch, regardless of the previous selection. Review them before applying. The normal loadout-cycle option and all-eight option may both be checked; all-eight expands the available cycle. Reload-on-Trigger enables the pilot-ability remap; random weapons require holster swapping.
-
-The patcher rebuilds files from verified baselines rather than stacking edits. Unchecking all options returns supported files to their baseline. **Restore** uses the original backup journal. Existing 1.0.17 journals and our current manual modifications are supported.
-
-Backups and journals live inside the game folder in `.quest-custom-patch`, `.quest-custom-patch-1.0.14` or `.quest-custom-patch-1.0.17`. Keep these folders. Do not run an older patcher over 1.3.0.
-
-## Source and build
-
-This repository contains the patcher source, not the original VR mod source.
-
-- `QuestPatch.cs` — UI, installer, verification and recovery.
-- `features.json` — feature descriptions, instructions and display order.
-- `messages.json` — English translations of installer messages.
-- `payload.json` — binary patch operations, script deltas and supported-file hashes.
-- `build.ps1` — standalone x64 .NET Framework build.
-
-Run `./build.ps1` on Windows. The result is `dist/Titanfall2VR-QuestPatch.exe`. No original game DLLs or complete original game scripts are included.
-
-## Verification and limits
-
-See [VERIFICATION.md](VERIFICATION.md). The installer was checked on isolated copies, including the 8192 feature combinations, apply/restore and upgrade from the current manual installation. UI dependencies, both language builds and the 13-frame GIFs were checked. These checks do not replace playing in a VR headset.
-
-Level resources and saved state can limit available loadouts or random weapons. C4 pickup, dual wielding, slide prototypes, late server-console loading, automatic recenter on embark and the cosmetic disembark weapon fix are not included. The aiming dot does not predict bullet spread.
-
-## Credits
-
-Original Titanfall 2 VR mod and installer: [CircuitLord](https://github.com/CircuitLord/CircuitLordVRModInstaller). This is a separate, unofficial campaign add-on, not an official CircuitLord release.
+[**♥ Support the project on Ko-fi**](https://ko-fi.com/vikaquest)

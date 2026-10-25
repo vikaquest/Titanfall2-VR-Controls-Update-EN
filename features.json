@@ -1,5 +1,26 @@
 [
   {
+    "id": "settings",
+    "group": "Настройки",
+    "groupEn": "Settings",
+    "title": "Все настройки — внутри игры",
+    "titleEn": "All settings are in the game",
+    "description": "Патчер устанавливает единый набор улучшений. Включайте нужное и меняйте управление прямо в меню VR, без повторного применения патча.",
+    "descriptionEn": "The patcher installs one complete set of improvements. Toggle features and adjust controls in VR settings without reinstalling the patch.",
+    "controls": [
+      "Меню игры → Настройки VR",
+      "Основные VR · Титан · Оружие",
+      "Рывок · Звуки · Прицел"
+    ],
+    "controlsEn": [
+      "Game menu → VR Settings",
+      "Basic VR · Titan · Weapons",
+      "Dash · Sounds · Reticle"
+    ],
+    "note": "Патчер рассчитан на VR-мод 1.0.17. Перед установкой закройте игру. Существующие сохранённые VR-настройки не сбрасываются.",
+    "noteEn": "Requires VR mod 1.0.17. Close the game before applying. Existing saved VR preferences are preserved."
+  },
+  {
     "id": "cycle",
     "group": "Титан",
     "groupEn": "Titan",
@@ -8,13 +29,13 @@
     "description": "Меняйте вооружение и способности титана по кругу, не открывая меню.",
     "descriptionEn": "Cycle through your Titan's weapons and abilities without opening a menu.",
     "controls": [
-      "Правый Grip + X → следующий комплект"
+      "Правый Grip + B → следующий комплект"
     ],
     "controlsEn": [
-      "Right Grip + X → next loadout"
+      "Right Grip + B → next loadout"
     ],
-    "note": "Только внутри титана. X находится на левом контроллере. Одно нажатие комбинации — одно переключение. Для выхода из титана используйте обычный X без Grip.",
-    "noteEn": "Only while piloting a Titan. X is on the left controller. One chord press switches once. Plain X without Grip keeps its normal disembark action."
+    "note": "Только внутри титана. Левый Grip + B имеет приоритет для способности 3. Обычный X без Grip сохраняет выход из титана.",
+    "noteEn": "Titan only. Left Grip + B keeps priority for ability 3. Plain X without Grip keeps disembark."
   },
   {
     "id": "allTitans",
@@ -25,14 +46,12 @@
     "description": "Добавьте в круг переключения даже те комплекты, которые ещё закрыты по сюжету.",
     "descriptionEn": "Include campaign loadouts that have not yet been unlocked by the story.",
     "controls": [
-      "Правый Grip + X → переключение по кругу",
-      "Expedition · Tone · Scorch · Brute",
-      "Ion · Ronin · Northstar · Legion"
+      "Настройки VR → Титан → Доступные комплекты",
+      "Только открытые / Все восемь"
     ],
     "controlsEn": [
-      "Right Grip + X → cycle loadouts",
-      "Expedition · Tone · Scorch · Brute",
-      "Ion · Ronin · Northstar · Legion"
+      "VR Settings → Titan → Available loadouts",
+      "Unlocked only / All eight"
     ],
     "note": "Доступны, когда вы управляете титаном. Сам титан в пешей части первой миссии не выдаётся. Замки в меню и сюжетный прогресс сохраняются. Недоступные на уровне ресурсы могут ограничивать выбор.",
     "noteEn": "Available once you are piloting a Titan; this does not spawn a Titan during the first mission's on-foot section. Menu locks and story progress remain unchanged. Level resource availability can limit selection."
@@ -61,46 +80,90 @@
       "Left Grip + Right Trigger → melee",
       "R3 without Grip → melee"
     ],
-    "note": "A и B находятся на правом контроллере. R3 — нажатие правого стика. Способность 1 поддерживает удержание. Для VR 1.0.13 / 1.0.14 сохраняется прежняя схема; новые сочетания относятся к 1.0.17.",
-    "noteEn": "A and B are on the right controller. R3 means clicking the right stick. Ability 1 supports holding. VR 1.0.13 / 1.0.14 retain their earlier mapping; the updated chords apply to 1.0.17."
+    "note": "A и B находятся на правом контроллере. R3 — нажатие правого стика. Способность 1 поддерживает удержание.",
+    "noteEn": "A and B are on the right controller. R3 means clicking the right stick. Ability 1 supports holding."
   },
   {
     "id": "weightedSteering",
     "group": "Титан",
     "groupEn": "Titan",
-    "title": "Быстрый поворот кабины титана головой и оружием",
-    "titleEn": "Fast Titan cockpit turning with head and weapon",
-    "description": "Оружие задаёт 70% направления кабины, голова — 30%. Поворот быстрее, с небольшим доворотом по инерции.",
-    "descriptionEn": "The weapon contributes 70% of the cockpit's target heading and your head contributes 30%. Turning is faster, with a brief inertial follow-through.",
+    "title": "Настраиваемый поворот кабины титана",
+    "titleEn": "Adjustable Titan cabin steering",
+    "description": "Выбирайте расширенное или оригинальное управление. В расширенном режиме настройте доли оружия и головы, скорость и инерцию поворота.",
+    "descriptionEn": "Choose extended or original steering. Adjust the weapon/head mix, speed and turning inertia in extended mode.",
     "controls": [
-      "Оружие — 70%   /   Голова — 30%",
-      "Автодоворот — до 360°/с",
-      "Краткая инерция — до 20°"
+      "Настройки VR → Титан → Управление кабиной",
+      "Оружие / голова: ползунок с шагом 5%",
+      "Скорость кабины · Инерция · Сила инерции"
     ],
     "controlsEn": [
-      "Weapon — 70%   /   Head — 30%",
-      "Automatic turn rate — up to 360°/s",
-      "Transient inertial lead — up to 20°"
+      "VR Settings → Titan → Cabin controls",
+      "Weapon / head mix: slider in 5% steps",
+      "Cabin speed · Inertia · Inertia strength"
     ],
-    "note": "Также ускоряет переходы защиты мечом и восстановление до 0,1 с. При потере корректной позы оружия управление временно переходит к голове. Если поворот стиком включён, его скорость увеличивается вдвое.",
-    "noteEn": "Also reduces sword-defense transitions and recovery settings to 0.1 s. If the weapon pose is invalid, steering falls back to the headset. Stick turn speed is doubled when stick turning is enabled."
+    "note": "Изначально 70% оружие / 30% голова. Оригинальный режим использует правила автора VR-мода. Сила инерции 100% — доворот до 20°.",
+    "noteEn": "Defaults to 70% weapon / 30% head. Original mode uses the VR author’s rules. Inertia at 100% allows up to 20° of extra rotation."
   },
   {
     "id": "noStickYaw",
     "group": "Титан",
     "groupEn": "Titan",
-    "title": "Убрать поворот кабины титанов стиками влево вправо",
-    "titleEn": "Disable left/right Titan cockpit stick turning",
-    "description": "Отключите искусственный поворот правым стиком у пилота и титана. Поворачивайтесь движениями в VR.",
-    "descriptionEn": "Disable artificial left/right turning with the right stick, both on foot and in a Titan. Use physical VR movement instead.",
+    "title": "Поворот кабины правым стиком",
+    "titleEn": "Right-stick cabin turning",
+    "description": "Оставьте поворот кабины стиком или отключите его в настройках титана. Голова и оружие продолжают управлять выбранной схемой.",
+    "descriptionEn": "Keep right-stick cabin turning or disable it in Titan settings. Head and weapon steering remain active.",
     "controls": [
-      "Правый стик влево / вправо → без поворота"
+      "Настройки VR → Титан → Отключить поворот кабины стиком"
     ],
     "controlsEn": [
-      "Right stick left / right → no virtual turn"
+      "VR Settings → Titan → Disable stick cabin turning"
     ],
-    "note": "Движения стика вверх-вниз и его нажатие сохраняются. Для управления кабиной титана движениями включите смешанный поворот за оружием и головой.",
-    "noteEn": "Vertical stick input and stick clicks are preserved. Enable weapon/head steering above to steer the Titan cockpit using tracked motion."
+    "note": "По умолчанию отключение выключено: стик может поворачивать кабину. Это отдельная настройка от рывков пилота.",
+    "noteEn": "Disabled by default: the stick can turn the cabin. This setting is separate from pilot stick dashes."
+  },
+  {
+    "id": "groundDash",
+    "group": "Пилот · движение",
+    "groupEn": "Pilot · movement",
+    "title": "Рывок-подкат на земле",
+    "titleEn": "Ground dash and slide",
+    "description": "Быстро выходите из укрытия вперёд, назад или в сторону. Рывок принудительно включает короткий подкат.",
+    "descriptionEn": "Dash out of cover forward, backward or sideways, with a short forced slide.",
+    "controls": [
+      "Левый Grip + левый Trigger → рывок-подкат",
+      "Либо включите «Рывки на правом стике»",
+      "Удержание по умолчанию 0,2 с · Перезарядка 0,2 с"
+    ],
+    "controlsEn": [
+      "Left Grip + left Trigger → ground dash-slide",
+      "Or enable “Right-stick dashes”",
+      "Default hold 0.2 s · Cooldown 0.2 s"
+    ],
+    "note": "Настройки VR → Рывок. Наземный и воздушный рывки включаются отдельно. При физическом приседании подкат продлевается; прыжок сохраняет инерцию. Автобег принудительно включён.",
+    "noteEn": "VR Settings → Dash. Ground and air dashes can be enabled separately. Physical crouching extends the slide; jumping preserves momentum. Auto-sprint is forced on."
+  },
+  {
+    "id": "airDash",
+    "group": "Пилот · движение",
+    "groupEn": "Pilot · movement",
+    "title": "Рывок в воздухе",
+    "titleEn": "Air dash",
+    "description": "Ускоряйтесь во время прыжка или падения. Рывок меняет горизонтальное движение, сохраняя вертикальную скорость.",
+    "descriptionEn": "Dash while jumping or falling. Horizontal movement changes while vertical velocity is preserved.",
+    "controls": [
+      "Левый Grip + левый Trigger → воздушный рывок",
+      "Левый стик задаёт направление для комбинации",
+      "Без отклонения — по горизонтальной инерции",
+      "Либо включите рывки направлением правого стика"
+    ],
+    "controlsEn": [
+      "Left Grip + left Trigger → air dash",
+      "Left stick selects direction for the chord",
+      "Neutral stick follows horizontal momentum",
+      "Or enable directional right-stick dashes"
+    ],
+    "note": "Настройки VR → Рывок. Можно выключить отдельно от наземного рывка. Вертикальная скорость сохраняется. Звук ранца регулируется во вкладке «Звуки».",
+    "noteEn": "VR Settings → Dash. Can be disabled independently of ground dash. Vertical velocity is preserved. Adjust the jet sound in the Sounds tab."
   },
   {
     "id": "holster",
@@ -120,23 +183,42 @@
     "noteEn": "Both weapons must be holstered, hands empty, and other buttons released. B is on the right controller. With a weapon in hand, B retains normal reload behavior."
   },
   {
+    "id": "autoEmpty",
+    "group": "Оружие",
+    "groupEn": "Weapons",
+    "title": "Автосмена после пустого магазина",
+    "titleEn": "Auto-swap after an empty magazine",
+    "description": "Расстреляйте магазин и уберите оружие: основное и побочное поменяются кобурами. Следующим вы сможете достать другое оружие из-за спины.",
+    "descriptionEn": "Empty the magazine and holster the weapon to swap the main and side holsters. Your next back-holster draw selects the other weapon.",
+    "controls": [
+      "Настройки VR → Оружие",
+      "«Смена на побочное при пустом магазине»"
+    ],
+    "controlsEn": [
+      "VR Settings → Weapons",
+      "“Swap to secondary on empty magazine”"
+    ],
+    "note": "По умолчанию выключено. Второе оружие не достаётся автоматически и может быть пустым. Перезарядка перед убиранием отменяет обмен.",
+    "noteEn": "Off by default. The second weapon is not drawn automatically and may also be empty. Reloading before holstering cancels the swap."
+  },
+  {
     "id": "dot",
     "group": "Оружие",
     "groupEn": "Weapons",
-    "title": "Точка прицела от бедра",
-    "titleEn": "Hip-fire aiming dot",
-    "description": "Видьте направление оружия, не поднося его к глазу и не входя в режим прицеливания.",
-    "descriptionEn": "See where your weapon is pointing without bringing it up to your eye or entering the aiming view.",
+    "title": "Прицел у оружия: форма и размер",
+    "titleEn": "Weapon reticle: shape and size",
+    "description": "Прицел следует за оружием и показывает направление стрельбы. Выбирайте заполненную точку, кольцо, крест или три линии.",
+    "descriptionEn": "A weapon-following reticle shows your firing direction. Choose a filled dot, ring, cross or three lines.",
     "controls": [
-      "Белая заполненная точка",
-      "Отображается с оружием в руках у пилота"
+      "Настройки VR → Прицел → Тип прицела",
+      "Размер: от 50% до 200% · Можно выключить"
     ],
     "controlsEn": [
-      "Small, solid white dot",
-      "Shown while the pilot holds a weapon"
+      "VR Settings → Reticle → Reticle type",
+      "Size: 50% to 200% · Can be disabled"
     ],
-    "note": "Это указатель направления оружия. Он не отображает разброс или предсказанную траекторию. Для гранат и титана точка не показывается.",
-    "noteEn": "This indicates weapon direction, not bullet spread or a predicted trajectory. It is not shown for grenades or Titans."
+    "note": "Работает независимо от HUD пилота. Прицел у головы скрыт; счётчики патронов, гранат и готовности способности сохраняются. Разброс штатного прицела не воспроизводится.",
+    "noteEn": "Works independently of the pilot HUD. The head reticle is hidden; ammo, grenade and ability indicators remain. Native spread animations are not reproduced."
   },
   {
     "id": "randomWeapon",
@@ -154,8 +236,8 @@
       "Right Trigger + B → random weapon",
       "Press B again for another replacement"
     ],
-    "note": "Оба оружия должны быть убраны, руки — пустыми. Выбор из 31 типа зависит от ресурсов уровня; имеющиеся типы исключаются. Требует включённого обмена оружия между кобурами.",
-    "noteEn": "Both weapons must be holstered and your hands empty. The 31-weapon pool is filtered by level resource availability and excludes your current weapons. Requires the holster-swap option."
+    "note": "Только вне титана, с пустыми руками и обоими оружиями в кобурах. Выбор ограничен ресурсами локации; это не гарантированный полный пул. Оружия в кобурах исключаются. Настройки VR → Оружие.",
+    "noteEn": "Pilot only, with empty hands and both weapons holstered. Selection is limited by level resources; the full pool is not guaranteed. Holstered weapons are excluded. VR Settings → Weapons."
   },
   {
     "id": "reload",
@@ -171,8 +253,8 @@
     "controlsEn": [
       "Left Trigger → magazine and reload"
     ],
-    "note": "Автоматически включает перенос способности пилота на L3, чтобы освободить левый Trigger.",
-    "noteEn": "Automatically enables moving the pilot ability to L3 to free the left trigger."
+    "note": "Для взятия магазина отпустите левый Grip: пока он зажат, левый Trigger магазин не берёт. Комбинация левый Grip + левый Trigger может использоваться для рывка пилота.",
+    "noteEn": "Release left Grip to grab a magazine: left Trigger cannot grab one while Grip is held. Left Grip + left Trigger can activate the pilot dash."
   },
   {
     "id": "cloak",
@@ -197,16 +279,16 @@
     "groupEn": "Interactions",
     "title": "Область поддержки оружия ×2",
     "titleEn": "Double the support-hand area",
-    "description": "Увеличьте в два раза область, в которой срабатывает хват оружия второй рукой.",
-    "descriptionEn": "Double the interaction area used when supporting your weapon with the second hand.",
+    "description": "Увеличенная вдвое область облегчает первоначальный захват. После захвата поддержка сохраняется, даже если левая рука отдалилась от оружия.",
+    "descriptionEn": "The doubled reach area makes the initial support grip easier. Once acquired, support stays latched even when the left hand moves away.",
     "controls": [
       "Область хвата второй рукой ×2"
     ],
     "controlsEn": [
       "Support-hand grab area ×2"
     ],
-    "note": "Область извлечения оружия правым Grip не меняется.",
-    "noteEn": "Does not change the right-Grip weapon-draw area."
+    "note": "Удерживайте левый Grip для поддержки. Отпустите его, чтобы убрать вторую руку или взять магазин. Начальная область захвата всё ещё нужна.",
+    "noteEn": "Hold left Grip to keep supporting. Release it to let go or grab a magazine. Initial acquisition still requires entering the reach area."
   },
   {
     "id": "area",
@@ -241,5 +323,98 @@
     ],
     "note": "Опция относится к обычным гранатам. Изменение взятия C4 в неё не входит.",
     "noteEn": "Applies to regular grenades. C4 pickup changes are not included."
+  },
+  {
+    "id": "soundClick",
+    "group": "Звуки",
+    "groupEn": "Sounds",
+    "title": "Звук пустого магазина",
+    "titleEn": "Empty-magazine click",
+    "description": "Щелчок при попытке выстрелить из оружия с пустым магазином. Настраивайте образец и отдельную громкость.",
+    "descriptionEn": "Hear a click when trying to fire an empty weapon. Choose a sample and adjust its own volume.",
+    "controls": [
+      "Правый Trigger с оружием в руках",
+      "Настройки VR → Звуки → Щелчок пустого магазина"
+    ],
+    "controlsEn": [
+      "Right Trigger while holding a weapon",
+      "VR Settings → Sounds → Empty-magazine click"
+    ],
+    "note": "Не звучит с убранным оружием. Громкость 0–300%, шаг 10%. 100% — настроенная базовая громкость.",
+    "noteEn": "Silent when the weapon is holstered. Volume 0–300% in 10% steps. 100% is the tuned base level."
+  },
+  {
+    "id": "soundEmpty",
+    "group": "Звуки",
+    "groupEn": "Sounds",
+    "title": "Сигнал последнего патрона",
+    "titleEn": "Last-round notification",
+    "description": "Отдельный сигнал сообщает, что из магазина израсходован последний патрон.",
+    "descriptionEn": "A separate notification plays when the last round is fired.",
+    "controls": [
+      "Настройки VR → Звуки → Сигнал последнего патрона",
+      "Включение · Образец · Громкость 0–300%"
+    ],
+    "controlsEn": [
+      "VR Settings → Sounds → Last-round notification",
+      "Toggle · Sample · Volume 0–300%"
+    ],
+    "note": "Одно уведомление после последнего выстрела. Взятие уже пустого оружия не вызывает сигнал. Шаг громкости 10%.",
+    "noteEn": "One notification after the last shot. Drawing an already empty weapon does not trigger it. Volume steps are 10%."
+  },
+  {
+    "id": "soundDash",
+    "group": "Звуки",
+    "groupEn": "Sounds",
+    "title": "Звук ранца при воздушном рывке",
+    "titleEn": "Air-dash jet sound",
+    "description": "Короткий звук ранца воспроизводится один раз при воздушном рывке.",
+    "descriptionEn": "A short jet sound plays once per air dash.",
+    "controls": [
+      "Настройки VR → Звуки → Звук воздушного рывка",
+      "Включение · Громкость 0–300% · Шаг 10%"
+    ],
+    "controlsEn": [
+      "VR Settings → Sounds → Air-dash sound",
+      "Toggle · Volume 0–300% · 10% steps"
+    ],
+    "note": "Используется закреплённый образец ранца. Настройка не меняет общую громкость игры.",
+    "noteEn": "Uses the selected fixed jet sample. Does not change global game volume."
+  },
+  {
+    "id": "reserve",
+    "group": "Боезапас",
+    "groupEn": "Ammunition",
+    "title": "Бесконечный резерв для перезарядки",
+    "titleEn": "Unlimited reload reserves",
+    "description": "Резерв патронов пополняется автоматически, но магазин оружия нужно перезаряжать вручную.",
+    "descriptionEn": "Reserve ammunition refills automatically; weapon magazines still require manual reloading.",
+    "controls": [
+      "Перезарядка — обычным VR-движением",
+      "Вместимость магазина и темп стрельбы не меняются"
+    ],
+    "controlsEn": [
+      "Reload using the usual VR interaction",
+      "Magazine capacity and fire rate are unchanged"
+    ],
+    "note": "Работает для пилота в кампании. Отдельного переключателя резерва в игровом меню нет.",
+    "noteEn": "Campaign pilot only. There is no separate reserve-ammo toggle in the game menu."
+  },
+  {
+    "id": "grenadeSupply",
+    "group": "Боезапас",
+    "groupEn": "Ammunition",
+    "title": "Восстановление обычных гранат",
+    "titleEn": "Normal grenade recharge",
+    "description": "Обычные гранаты восстанавливаются до трёх через 20 секунд после последнего броска, даже если запас израсходован лишь частично.",
+    "descriptionEn": "Normal grenades recharge to three 20 seconds after the last throw, including partially spent supplies.",
+    "controls": [
+      "Бросок → 20 секунд без бросков → 3 гранаты"
+    ],
+    "controlsEn": [
+      "Throw → 20 seconds without throwing → 3 grenades"
+    ],
+    "note": "Каждый новый бросок запускает отсчёт заново. C4, мины, устройства с дистанционным подрывом и зарядовая разведывательная граната исключены.",
+    "noteEn": "Each new throw restarts the timer. C4, mines, remote-detonated devices and the charge-based sonar grenade are excluded."
   }
 ]

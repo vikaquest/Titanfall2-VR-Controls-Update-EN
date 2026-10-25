@@ -1,7 +1,7 @@
-# v1.3.0
+# Titanfall 2 VR — Controls Update v1.5.0
 
-New list-and-details UI with instructions for every feature. Fully English buttons, descriptions and installer messages. All features checked by default. Includes Right Grip+X Titan cycling, all-eight campaign loadouts, Grip ability chords, 70/30 steering and Right Trigger+B random weapons.
+One complete installation without checkboxes. Configure Titan, weapon, dash, sound and reticle features in the game.
 
-The README includes a real 13-frame application tour, switching every second.
+Includes separate ground/air dash settings, adjustable sound feedback, reticle shapes and empty-magazine auto-swap. Cycle Titan loadouts with right Grip + B. Fixed the support button border and clarified restoration. Requires VR mod 1.0.17.
 
-Updated in place: dark theme, cyan accents, clearer cockpit-turning titles, and reordered README.
+Close the game before applying. Backups are stored in the game folder.

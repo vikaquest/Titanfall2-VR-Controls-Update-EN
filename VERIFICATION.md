@@ -1,5 +1,7 @@
-# Verification — 22 October 2026
+# 1.5.0 validation
 
-The game patch recipes are unchanged from the locally verified 1.3.0 release: 8192 combinations built, older profiles preserved, apply/reapply/all-off/restore and manual-journal upgrade tested on isolated copies. The new UI maps each reordered entry by feature ID and bit, not by its displayed index. UI self-checks exercise all 13 default selections, reload/cloak and random/holster dependencies, and selecting every detail page. RU and EN output files are compared using isolated apply tests. Both GIFs contain 13 actual application frames at 1000 ms per frame. No working game files were modified for packaging or verification.
-
-The public EXEs still need an end-to-end user test in VR.
+- Both interface builds: 22 catalog entries; no checkboxes; descriptions and controls populated; support button unobscured; restore caption fits.
+- Checked exact payload integrity, fresh installation/restoration, migration from the prior custom installation, reapplication, existing-file adoption/restoration, rejection of unknown files and damaged backups, interrupted-transaction recovery, and native dependency guards.
+- Native checks: 824 settings/control cases, 142 direct audio ABI cases and 416 auto-swap/held-weapon cases.
+- Verified transferred gameplay files against the prepared source snapshot and preserved launch/Northstar files.
+- Headset behavior on each user's installation still requires testing. This is not a claim of exhaustive game compatibility.
