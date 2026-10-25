@@ -11,3 +11,6 @@ Backups/
 *.tmp
 
 docs/frames/
+
+# Private runtime payload is intentionally not published.
+payload.json

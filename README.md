@@ -2,9 +2,11 @@
 
 Unofficial patcher for CircuitLord’s Titanfall 2 VR mod. Adds control, dash, reticle and sound improvements. Configure individual features in the game; the patcher shows a feature catalog on the left and detailed instructions on the right.
 
-## Download
+## Public project files
 
-[**Download EXE v1.5.0**](https://github.com/vikaquest/Titanfall2-VR-Controls-Update-EN/releases/download/v1.5.0/Titanfall2VR-QuestPatch.exe) · [ZIP](https://github.com/vikaquest/Titanfall2-VR-Controls-Update-EN/releases/download/v1.5.0/Titanfall2VR-QuestPatch.zip) · [Release page](https://github.com/vikaquest/Titanfall2-VR-Controls-Update-EN/releases/tag/v1.5.0)
+This repository publishes the patcher interface, installation logic, text resources and screenshot. The private `payload.json` containing prepared game files has been removed from branches and tags, including their history. Automatic builds and publication are disabled. Release 1.5.0 has been withdrawn.
+
+This is **not a complete standalone build kit**: interface source is available, but a working EXE requires the private payload. Existing local developer builds are unaffected.
 
 ## Install
 
@@ -55,9 +57,9 @@ Backups are stored in `.quest-controls-update-1.5.0` inside the game folder. Ear
 
 ## Source and validation
 
-Window and installer source: `QuestPatch.cs`; resources: `features.json`, `messages.json`, `payload.json`. Build with `powershell -ExecutionPolicy Bypass -File ./build.ps1`.
+Window and installation logic source: `QuestPatch.cs`; public text resources: `features.json`, `messages.json`. Building requires the **unpublished** `payload.json`. Once supplied locally, run `powershell -ExecutionPolicy Bypass -File ./build.ps1`. Without it, the build stops with an explanatory message.
 
-`payload.json` contains prepared game files, not the original VR mod’s C++ source. CircuitLord creates the original VR mod; this project supplies unofficial modifications and a patcher.
+The private `payload.json` contains prepared game files, not the original VR mod’s C++ source; it is not part of the public repository. CircuitLord creates the original VR mod; this project supplies unofficial modifications and a patcher.
 
 Installation, reapplication, restoration and interrupted-transaction recovery were checked on file fixtures, along with embedded-file integrity and both interface languages. See [VERIFICATION.md](VERIFICATION.md). Code checks do not replace testing your installation in a headset.
 
